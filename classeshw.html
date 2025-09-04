@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+<button onclick="submission()">Submit</button>
+     
+<button onclick="cancellation()">Cancel</button>
+
+<script>
+
+    class Railway {
+
+        submit (name, ticket) {
+            alert("Form has been submitted by" + name + "And your ticket number is" + ticket)
+
+
+        }
+        cancel() {
+            alert("Form has been cancelled")
+        }
+    }
+
+    class Flight extends Railway {
+
+        fly() {
+            alert("Flight has been cancelled")
+        }
+    }
+
+    let Kiara = new Railway
+
+    function submission() {
+        Kiara.submit("Kiara", "A6")
+    }
+
+    let Sophia = new Railway
+
+    function cancellation() {
+        Sophia.cancel()
+    }
+
+    let Clara = new Flight
+
+    Clara.submit("Clara", "D13")
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
